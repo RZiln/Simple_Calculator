@@ -14,17 +14,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:columnCount="4"
-        app:rowCount="5"
-        app:useDefaultMargins="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:rowCount="5"
+        app:useDefaultMargins="true">
 
         <Button
             android:id="@+id/buttonSqr"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="sqr"
+            android:text="@string/btn_sqr"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -32,7 +32,7 @@
             android:id="@+id/buttonC"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="C"
+            android:text="@string/btn_c"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -40,7 +40,7 @@
             android:id="@+id/buttonCE"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="CE"
+            android:text="@string/btn_ce"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -48,7 +48,7 @@
             android:id="@+id/buttonPlus"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="+"
+            android:text="@string/btn_plus"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -56,7 +56,7 @@
             android:id="@+id/buttonOne"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="1"
+            android:text="@string/btn_one"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -64,7 +64,7 @@
             android:id="@+id/buttonTwo"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="2"
+            android:text="@string/btn_two"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -72,7 +72,7 @@
             android:id="@+id/buttonThree"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="3"
+            android:text="@string/btn_three"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -80,7 +80,7 @@
             android:id="@+id/buttonMinus"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="-"
+            android:text="@string/btn_minus"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -88,7 +88,7 @@
             android:id="@+id/buttonFour"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="4"
+            android:text="@string/btn_four"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -96,7 +96,7 @@
             android:id="@+id/buttonFive"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="5"
+            android:text="@string/btn_five"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -104,7 +104,7 @@
             android:id="@+id/buttonSix"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="6"
+            android:text="@string/btn_six"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -112,7 +112,7 @@
             android:id="@+id/buttonMultiply"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="x"
+            android:text="@string/btn_multiply"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -120,7 +120,7 @@
             android:id="@+id/buttonSeven"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="7"
+            android:text="@string/btn_seven"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -128,7 +128,7 @@
             android:id="@+id/buttonEight"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="8"
+            android:text="@string/btn_eight"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -136,7 +136,7 @@
             android:id="@+id/buttonNine"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="9"
+            android:text="@string/btn_nine"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -144,7 +144,7 @@
             android:id="@+id/buttonDivide"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="/"
+            android:text="@string/btn_divide"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
@@ -152,22 +152,33 @@
             android:id="@+id/buttonZero"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="0"
+            android:text="@string/btn_zero"
             app:layout_columnSpan="2"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill_horizontal"
-            app:layout_rowSpan="2" />
+            app:layout_columnWeight="2"
+            app:layout_gravity="fill_horizontal" />
 
         <Button
             android:id="@+id/buttonEqual"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="="
+            android:text="@string/btn_equal"
             app:layout_columnSpan="2"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill_horizontal"
-            app:layout_rowSpan="2" />
+            app:layout_columnWeight="2"
+            app:layout_gravity="fill_horizontal" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="28dp"
+        android:background="#DBDBDB"
+        android:maxLines="1"
+        android:textAlignment="textEnd"
+        app:autoSizeMinTextSize="2dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        tools:layout_editor_absoluteX="-2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
