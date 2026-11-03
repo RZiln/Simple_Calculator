@@ -1,6 +1,6 @@
 package com.example.simple_calculator;
 
-import android.media.VolumeShaper;
+import java.util.Objects;
 
 public class MathSolver {
 
@@ -11,5 +11,13 @@ public class MathSolver {
     public String appendDigit(String digit){
         currentInput.append(digit);
         return currentInput.toString();
+    }
+
+    public double setOperator(String string){
+        if (Objects.equals(string, "sqr")) {
+            Double strToDobule = Double.parseDouble(string);
+            return Math.sqrt(strToDobule);
+        }
+        return 0;
     }
 }
