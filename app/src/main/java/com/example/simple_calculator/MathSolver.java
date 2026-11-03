@@ -27,11 +27,81 @@ public class MathSolver {
 
         return currentInput.length() == 0 ? "0" : currentInput.toString();
     }
-    public double setOperator(String string){
-        if (Objects.equals(string, "sqr")) {
-            Double strToDobule = Double.parseDouble(string);
-            return Math.sqrt(strToDobule);
+    public double setOperator(String operator){
+        double number = getCurrentNumber();
+
+        if (operator.equals("sqr")) {
+            if (number > 0){
+                currentInput.setLength(0);
+                currentInput.append(formatResult(Math.sqrt(number)));
+
+                return Math.sqrt(number);
+            }
         }
-        return 0;
+
+        firstNumber = number;
+        pendingOperator = operator;
+
+        currentInput.setLength(0);
+
+        return firstNumber;
+
     }
+
+
+    public String calculate(){
+        if (pendingOperator == null || currentInput.length() == 0){
+            return currentInput.toString();
+        }
+
+        double secondNumber = getCurrentNumber();
+        double result;
+
+        switch (pendingOperator){
+            case "+":
+                result = firstNumber+secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "*":
+                result = firstNumber*secondNumber;
+                break;
+            case "/":
+                if (secondNumber==0){
+                    result = 0;
+                }
+                result = firstNumber/secondNumber;
+                break;
+            default:
+                return  currentInput.toString();
+        }
+
+        currentInput.setLength(0);
+        currentInput.append(formatResult(result));
+
+        pendingOperator = null;
+        firstNumber = 0;
+        return currentInput.toString();
+    }
+
+    private double getCurrentNumber() {
+        if (currentInput.length() == 0) {
+            return 0;
+        }
+
+        return Double.parseDouble(currentInput.toString());
+    }
+
+    private String formatResult(double result) {
+        if (result == (long) result) {
+            return String.valueOf((long) result);
+        }
+
+        return String.valueOf(result);
+    }
+    public String getCurrentInput() {
+        return currentInput.length() == 0 ? "0" : currentInput.toString();
+    }
+
 }

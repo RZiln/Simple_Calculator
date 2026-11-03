@@ -53,5 +53,32 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(mathSolver.clear());
         });
 
+
+        setupOperator(R.id.buttonPlus, "+");
+        setupOperator(R.id.buttonMinus, "-");
+        setupOperator(R.id.buttonMultiply, "*");
+        setupOperator(R.id.buttonDivide, "/");
+
+
+        Button btnEqual = findViewById(R.id.buttonEqual);
+        btnEqual.setOnClickListener(v -> {
+            textView.setText(mathSolver.calculate());
+        });
+
+        Button btnSqr = findViewById(R.id.buttonSqr);
+        btnSqr.setOnClickListener(v -> {
+            mathSolver.setOperator("sqr");
+            textView.setText(mathSolver.getCurrentInput());
+        });
+
+    }
+
+    private void setupOperator(int buttonId, String operator) {
+        Button btn = findViewById(buttonId);
+
+        btn.setOnClickListener(v -> {
+            mathSolver.setOperator(operator);
+            textView.setText(mathSolver.getCurrentInput());
+        });
     }
 }
