@@ -13,6 +13,20 @@ public class MathSolver {
         return currentInput.toString();
     }
 
+    public String clear(){
+        currentInput.setLength(0);
+        firstNumber = 0;
+        pendingOperator = null;
+        return "0";
+    }
+
+    public String clearEntry() {
+        if (currentInput.length() > 0) {
+            currentInput.deleteCharAt(currentInput.length() - 1);
+        }
+
+        return currentInput.length() == 0 ? "0" : currentInput.toString();
+    }
     public double setOperator(String string){
         if (Objects.equals(string, "sqr")) {
             Double strToDobule = Double.parseDouble(string);

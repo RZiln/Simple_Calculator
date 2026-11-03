@@ -42,5 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }
+
+        Button btnClearEntry = findViewById(R.id.buttonC);
+        btnClearEntry.setOnClickListener(v -> {
+            textView.setText(mathSolver.clearEntry());
+        });
+
+        Button btnClear = findViewById(R.id.buttonCE);
+        btnClear.setOnClickListener(v -> {
+            textView.setText(mathSolver.clear());
+        });
+
     }
 }
